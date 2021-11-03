@@ -1,4 +1,5 @@
 require("dotenv").config();
+const path = require("path")
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -27,7 +28,6 @@ const connectDB = async () => {
   const result = await mongoose.connect(dbURI);
   if (result) {
     console.log("Connected to mongoDB");
-    app.listen(8000);
   } else console.log("Error connection to db");
 };
 connectDB();
@@ -172,8 +172,16 @@ app.post("/query", (req, res) => {
   });
 });
 
-app.get("/plot", (req, res) => {
+app.get("/chart/data", (req, res) => {
   ScoreData.find({}, (err, entries) => {
     res.send(entries);
   });
 });
+
+app.use(express.static("build"));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "build", "index.html"));
+});
+
+app.listen(8000);

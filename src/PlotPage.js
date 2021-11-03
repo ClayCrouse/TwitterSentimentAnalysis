@@ -9,7 +9,7 @@ const PlotPage = () => {
 
   const handlePlotRequest = () => {
     axios
-      .get("http://localhost:8000/plot")
+      .get("/chart/data")
       .then((result) => {
         let dates = [];
         let vals = [];

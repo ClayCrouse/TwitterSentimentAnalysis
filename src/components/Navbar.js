@@ -11,13 +11,13 @@ const Navbar = () => {
           </a>
           <ul class="left hide-on-med-and-down">
             <li>
-              <a href="http://localhost:3000/about">About</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a href="http://localhost:3000/analyse">Twitter Analyzer</a>
+              <a href="/analyse">Twitter Analyzer</a>
             </li>
             <li>
-              <a href="http://localhost:3000/plot">Plot</a>
+              <a href="/plot">Plot</a>
             </li>
           </ul>
         </div>

@@ -19,7 +19,7 @@ const HomePage = () => {
       query: document.getElementById("searchBar").value,
     };
     axios
-      .post("http://localhost:8000/query", queryParams)
+      .post("/query", queryParams)
       .then((result) => {
         console.log(result.data);
         setScore(result.data.score);
