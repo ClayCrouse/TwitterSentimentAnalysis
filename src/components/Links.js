@@ -10,7 +10,7 @@ const Links = () => {
       <Router>
         <div>
           <Switch>
-            <Route path="/analyse">
+            <Route path="/">
               <HomePage />
             </Route>
             <Route path="/plot">

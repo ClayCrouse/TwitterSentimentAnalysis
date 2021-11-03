@@ -14,7 +14,7 @@ const Navbar = () => {
               <a href="/about">About</a>
             </li>
             <li>
-              <a href="/analyse">Twitter Analyzer</a>
+              <a href="/">Twitter Analyzer</a>
             </li>
             <li>
               <a href="/plot">Plot</a>
